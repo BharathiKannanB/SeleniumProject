@@ -27,6 +27,7 @@ public class ExcelData {
 				XSSFCell cell = row.getCell(i);
 				
 				data[j-1][i] = cell.getStringCellValue();
+			//	System.out.println(data);
 			}
 
 		}
