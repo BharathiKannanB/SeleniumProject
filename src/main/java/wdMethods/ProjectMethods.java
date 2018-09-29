@@ -23,18 +23,18 @@ public class ProjectMethods extends SeMethods{
 		startTestCase();
 	}
 	
-	@Parameters({"url","username","password"})
+	@Parameters({"url"})
 	@BeforeMethod(groups= {"common"})
-	public void login(String url, String username, String password) {
+	public void login(String url) {
 		startApp("chrome", url);
-		WebElement eleUserName = locateElement("id", "username");
+	/*	WebElement eleUserName = locateElement("id", "username");
 		type(eleUserName, username);
 		WebElement elePassword = locateElement("id","password");
 		type(elePassword, password);
 		WebElement eleLogin = locateElement("class", "decorativeSubmit");
 		click(eleLogin);
 		WebElement eleCRM = locateElement("linktext","CRM/SFA");
-		click(eleCRM);
+		click(eleCRM);*/
 	}
 	@AfterMethod(groups= {"common"})
 	public void closeApp() {
