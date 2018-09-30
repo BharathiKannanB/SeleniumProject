@@ -13,6 +13,14 @@ public class MyLoginPage extends ProjectMethods {
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(linkText = "Leads")
+	WebElement eleLeads;
+	public MyLeadsPage clickLeads()
+	{
+		click(eleLeads);
+		return new MyLeadsPage();
+	}
+	
 	@FindBy(linkText = "Create Lead")
 	WebElement eleCLead;
 	public CreateLeadPage clickCLead()
@@ -20,6 +28,7 @@ public class MyLoginPage extends ProjectMethods {
 		click(eleCLead);
 		return new CreateLeadPage();
 	}
+	
 
 	
 

@@ -14,9 +14,9 @@ public class ExcelData {
 		XSSFWorkbook wbook = new XSSFWorkbook("./data/"+excel+".xlsx");
 		XSSFSheet sheet = wbook.getSheet("Sheet1");
 		int rowCount = sheet.getLastRowNum();
-		System.out.println("Row Count" + rowCount); 
+		//System.out.println("Row Count" + rowCount); 
 		int colCount = sheet.getRow(0).getLastCellNum();
-		System.out.println("Column Count" + colCount); 
+		//System.out.println("Column Count" + colCount); 
 		Object[][] data = new Object[rowCount][colCount];
 		for(int j=1; j<= rowCount; j++)
 		{

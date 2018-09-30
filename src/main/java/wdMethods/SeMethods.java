@@ -91,6 +91,7 @@ public class SeMethods extends Reporter implements WdMethods{
 			ele.clear();
 			ele.sendKeys(data);
 			reportStep("The data: "+data+" entered successfully","Pass");
+			//throw new RuntimeException();
 		} catch (InvalidElementStateException e) {
 			System.out.println("The data: "+data+" could not entered");
 		} catch (WebDriverException e) {

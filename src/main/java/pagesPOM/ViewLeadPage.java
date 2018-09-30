@@ -23,4 +23,29 @@ public class ViewLeadPage extends ProjectMethods {
 		verifyExactText(eleView,expectedText);
 		return this;
 	}
+	
+	
+	
+	
+	public ViewLeadPage verifyPageTitle(String pageTitle) {
+		verifyPageTitle(pageTitle);
+		return this;
+	}
+	
+	@FindBy(id = "//a[text()='Edit']")
+	WebElement eleEditB;
+	public EditLeadPage clickEditB() {
+		
+		click(eleEditB);
+		return new EditLeadPage();
+	}
+	
+	@FindBy(id = "viewLead_companyName_sp")
+	WebElement eleFCnName;
+	public ViewLeadPage verifyCompanyName(String BCName) {
+		
+		verifyPartialText(eleFCnName, BCName);
+		return this;
+	}
+	
 }

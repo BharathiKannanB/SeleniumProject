@@ -40,10 +40,10 @@ public class CreateLeadPage extends ProjectMethods {
 	
 
 	@FindBy(how = How.XPATH, using = "//input[@value='Create Lead']" )
-	WebElement CreateLead;
+	WebElement createLead;
 	public ViewLeadPage clickCreate() {
 	//WebElement CreateLead= locateElement("xpath", "//input[@value='Create Lead']");
-    click(CreateLead);
+    click(createLead);
     return new ViewLeadPage();
 		
 	}
