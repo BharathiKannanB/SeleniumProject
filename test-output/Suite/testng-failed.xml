@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" data-provider-thread-count="3">
   <parameter name="url" value="http://leaftaps.com/opentaps"/>
   <test thread-count="5" name="Test(failed)">
     <classes>
@@ -10,7 +10,7 @@
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="login"/>
-          <include name="createLead"/>
+          <include name="createLead" invocation-numbers="1"/>
           <include name="beforeClass"/>
           <include name="setData"/>
         </methods>
